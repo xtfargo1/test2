@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Volume Booster",
+  "version": "1.0.0",
+  "description": "Boosts tab audio with an unlimited gain control.",
+  "permissions": ["storage", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_title": "Volume Booster",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content-script.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "volume-booster@example.com"
+    }
+  }
+}

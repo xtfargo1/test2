@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Volume Booster</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="panel">
+      <header class="panel__header">
+        <h1>Volume Booster</h1>
+        <p>Unlimited gain for the current tab.</p>
+      </header>
+      <section class="panel__control">
+        <label for="gain">Boost factor</label>
+        <div class="panel__input">
+          <input id="gain" name="gain" type="number" step="0.1" min="0" value="1" />
+          <span aria-hidden="true">×</span>
+        </div>
+        <p class="panel__hint">Enter any number. Higher values boost more.</p>
+      </section>
+      <button id="apply" class="panel__button" type="button">Apply</button>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
